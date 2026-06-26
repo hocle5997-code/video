@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikFlow - Tải Video TikTok Không Logo, Nhạc MP3 Chất Lượng Cao</title>
+    <!-- Google Fonts Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-decor">
+        <div class="blur-blob blob-1"></div>
+        <div class="blur-blob blob-2"></div>
+        <div class="blur-blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fab fa-tiktok logo-icon animate-pulse"></i>
+                <span class="logo-text">Tik<span class="text-neon">Flow</span></span>
+            </div>
+            <p class="tagline">Tải video TikTok không logo và tách nhạc MP3 cực kì nhanh chóng</p>
+        </header>
+
+        <!-- Main Card Section -->
+        <main class="main-card">
+            <!-- Search & Input Form -->
+            <section class="input-section">
+                <div class="input-wrapper">
+                    <i class="fas fa-link link-icon"></i>
+                    <input type="text" id="tiktok-url" placeholder="Dán link video TikTok vào đây..." autocomplete="off">
+                    <button id="paste-btn" class="action-mini-btn" title="Dán từ Clipboard">
+                        <i class="far fa-clipboard"></i>
+                    </button>
+                </div>
+                <button id="analyze-btn" class="primary-btn">
+                    <span>Phân tích</span>
+                    <i class="fas fa-arrow-right btn-arrow"></i>
+                </button>
+            </section>
+
+            <!-- Error Notification -->
+            <div id="error-message" class="error-box hidden">
+                <i class="fas fa-exclamation-circle error-icon"></i>
+                <span id="error-text">Đã xảy ra lỗi khi tải video!</span>
+            </div>
+
+            <!-- Loading Spinner -->
+            <section id="loader" class="loader-section hidden">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+                <p>Đang phân tích dữ liệu từ máy chủ TikTok...</p>
+            </section>
+
+            <!-- Result Section -->
+            <section id="result-section" class="result-section hidden">
+                <div class="video-info-wrapper">
+                    <!-- Left: Video Thumbnail / Cover -->
+                    <div class="video-cover-container">
+                        <img id="video-cover" src="" alt="Thumbnail Video">
+                        <div class="duration-badge">
+                            <i class="far fa-clock"></i>
+                            <span id="video-duration">0:00</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Author & Title Details -->
+                    <div class="video-details">
+                        <div class="author-profile">
+                            <img id="author-avatar" src="" alt="Avatar" class="author-avatar">
+                            <div class="author-meta">
+                                <h3 id="author-name">Tên người dùng</h3>
+                                <p id="author-username">@username</p>
+                            </div>
+                        </div>
+                        <h2 id="video-title" class="video-title">Tiêu đề video xuất hiện ở đây...</h2>
+                    </div>
+                </div>
+
+                <!-- Download Options Grid -->
+                <div class="download-options">
+                    <button class="download-btn btn-video-wm" id="download-video">
+                        <div class="btn-content">
+                            <i class="fas fa-download"></i>
+                            <div class="btn-text">
+                                <span class="btn-title">Tải Video Gốc</span>
+                                <span class="btn-subtitle">Không logo, chất lượng cao (MP4)</span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button class="download-btn btn-video-mute" id="download-mute">
+                        <div class="btn-content">
+                            <i class="fas fa-volume-mute"></i>
+                            <div class="btn-text">
+                                <span class="btn-title">Tải Video Không Âm</span>
+                                <span class="btn-subtitle">Chỉ hình ảnh, đã tắt tiếng (MP4)</span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button class="download-btn btn-audio" id="download-audio">
+                        <div class="btn-content">
+                            <i class="fas fa-music"></i>
+                            <div class="btn-text">
+                                <span class="btn-title">Tải Âm Thanh</span>
+                                <span class="btn-subtitle">Nhạc nền gốc dạng MP3</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2026 TikFlow. Phát triển bởi Đội ngũ Antigravity.</p>
+            <p class="footer-note">Ứng dụng này được phát triển cho mục đích cá nhân. Chúng tôi không lưu trữ bất kỳ video nào trên máy chủ.</p>
+        </footer>
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
