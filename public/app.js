@@ -62,13 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = urlInput.value.trim();
         
         if (!url) {
-            showError('Vui lòng dán đường dẫn video TikTok!');
+            showError('Vui lòng dán đường dẫn video TikTok hoặc Douyin!');
             return;
         }
 
-        // Kiểm tra xem có đúng định dạng link tiktok không
-        if (!url.includes('tiktok.com')) {
-            showError('Đường dẫn không hợp lệ. Vui lòng nhập link TikTok (ví dụ: tiktok.com/@username/video/...)!');
+        // Kiểm tra xem có đúng định dạng link tiktok hoặc douyin không
+        const isTikTok = url.includes('tiktok.com');
+        const isDouyin = url.includes('douyin.com');
+        if (!isTikTok && !isDouyin) {
+            showError('Đường dẫn không hợp lệ. Vui lòng nhập link TikTok hoặc Douyin!');
             return;
         }
 
